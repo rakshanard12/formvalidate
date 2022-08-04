@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOCUMENT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   <div class="container mt-99 justify-content-center">
+      <h2 class="text-info text-center">Form Validation</h2>
+     <div >
+        <form name="myform" action="form.html">
+         <div class="mb-7 mt-9">
+            <label for="name"><h5>NAME:</h5></label> <br>
+            <input type="text" class="form-control" id="n" name="ffff" placeholder="Enter your name" required ><br>
+         </div>
+         <div>            
+            <label for="roll"><h5>ROLL NO:</h5></label><br>
+            <input type="number" class="form-control" id="roll" name="rl" placeholder="Enter your roll no" required><br>
+         </div>
+         <div>
+            <label for="Mobile"><h5>Mobile No:</h5></label> <br>
+            <input type="number" class="form-control" id="n1" name="t1" placeholder="Enter your mobile no" required > <br>
+         </div>
+         <div>
+            <label for="email"><h5>Email:</h5></label><br>
+            <input type="email" class="form-control" id="mail" name="e1" placeholder="Enter your email" required><br>
+         </div>
+         <div>
+            <label for="pwd"><h5>Password:</h5></label><br>
+            <input type="password" class="form-control" id="pwd" name="pswd" placeholder="Enter your password" required >  <br>
+         </div>
+         <div>
+            <label for="grn"><h5>Gender:</h5></label><br>
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Male" >
+            <label class="form-check-label" for="radio1">Male</label>
+         </div>
+         <div>
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Female">
+            <label class="form-check-label" for="radio1">Female</label><br>
+         </div>
+         <br>
+         <div>
+            <label for="age"><h5>Age:</h5></label><br>
+            <input type="text" class="form-control" id="a1" name="age1" placeholder="Enter your age" required > <br>
+         </div>
+         <br>
+         <div>
+            <label for="dob"><h5>Date of Birth:</h5></label><br>
+            <input type="date" class="form-control" id="d1" name="dob" required > <br>
+         </div>
+         <br>
+         <div>
+            <label for="year"><h5>Year of study:</h5></label><br>
+            <input type="radio" class="form-check-input" id="radio3" name="radio" value="I">
+            <label class="form-check-label" for="radio1">1st year</label>
+         </div>
+         <div>
+            <input type="radio" class="form-check-input" id="radio4" name="radio" value="II" >
+            <label class="form-check-label" for="radio1">2nd year</label>
+         </div>
+         <div>
+            <input type="radio" class="form-check-input" id="radio5" name="radio" value="III">
+            <label class="form-check-label" for="radio1">3rd year</label>
+         </div>
+         <div>
+            <input type="radio" class="form-check-input" id="radio6" name="radio" value="IV">
+            <label class="form-check-label" for="radio1">4th year</label><br>
+         </div>
+         <br>
+         <div>
+            <label for="dept"><h5>Department:</h5></label><br>
+            <select class="form-select" name="dept" id="dep">
+               <option value="IT">IT</option>
+               <option value="CSE">CSE</option>
+               <option value="Mech">MECH</option>                                    
+               <option value="ece">ECE</option>
+             </select>
+             <br><br>
+         </div>
+         <div>
+            <Address>
+               <label for="add"><h5>Address:</h5></label><br>
+               <textarea class="form-control" id="comment" name="text" placeholder="Enter your address"></textarea>
+            </Address>
+         </div>
+         <button type="submit" value="Submit" onclick="val()" class="btn btn-primary" >Submit</button> 
+
+       </form>
+    
+      <script>
+        function val() {
+         let x = document.forms["myform"]["ffff"].value;
+        if (x == "") {
+        alert("Name must be filled out");
+        return false;
+        }
+        let y = document.forms["myform"]["roll"].value;
+        if (y == "") {
+        alert("Roll no must be filled out");
+        return false;
+
+     }
+     let t = document.forms["myform"]["t1"].value;
+        if (t == "" ) {
+        alert("Mobile no must be filled out");
+        return false;
+
+     }
+     if (t.length <10 ) {
+        alert("No Must be 10 digit");
+        return false;
+     }
+     let z = document.forms["myform"]["mail"].value;
+        if (z == "") {
+        alert("email  must be filled out");
+        return false;
+     }
+        let m = document.forms["myform"]["pwd"].value;
+        if (m == "") {
+        alert("password  must be filled out");
+        return false;
+     }
+         let n = document.forms["myform"]["optradio"].value;
+        if (n == "") {
+        alert("select gender");
+        return false;
+     }
+   }
+       
+     </script>
+</body>
+</html>
